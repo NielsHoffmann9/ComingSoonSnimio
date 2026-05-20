@@ -4,8 +4,8 @@ Landingspagina (wachtlijst + productuitleg) voor **Snimio** — launch **29 mei 
 
 | | |
 |--|--|
-| **GitHub** | https://github.com/flowixagents/ComingSoonSnimio |
-| **Live (Pages)** | https://flowixagents.github.io/ComingSoonSnimio/ *(na Pages aan)* |
+| **GitHub** | https://github.com/flowixagents/ComingSoonSnimio *(of `comingsoon` — zie `docs/GITHUB-SETUP.md`)* |
+| **Live (Pages)** | https://flowixagents.github.io/ComingSoonSnimio/ *(na repo + Pages)* |
 | **Productiedomein** | www.snim.io *(DNS apart instellen)* |
 
 ## Wat staat waar?
