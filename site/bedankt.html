@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bedankt — Snimio</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <main class="page-thanks">
+      <p class="eyebrow" data-i18n-nl>Je staat op de lijst</p>
+      <p class="eyebrow" data-i18n-en>You're on the list</p>
+
+      <h1 data-i18n-nl>Bedankt!</h1>
+      <h1 data-i18n-en>Thank you!</h1>
+
+      <p data-i18n-nl>
+        We sturen je een bevestiging per e-mail zodra de wachtlijst actief is. Je hoort van ons bij de
+        launch op <strong>29 mei 2026</strong>.
+      </p>
+      <p data-i18n-en>
+        We'll send a confirmation email once the waitlist is live. You'll hear from us at launch on
+        <strong>29 May 2026</strong>.
+      </p>
+
+      <p id="thanks-email" class="form-hint" hidden></p>
+
+      <div class="lang-toggle" style="margin-bottom: 24px">
+        <button type="button" data-lang="nl" class="is-active">NL</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+
+      <a href="index.html" class="btn btn--primary" data-i18n-nl>Terug naar home</a>
+      <a href="index.html" class="btn btn--primary" data-i18n-en>Back to home</a>
+    </main>
+    <script src="js/main.js"></script>
+    <script>
+      const email = sessionStorage.getItem('snimio-waitlist-email');
+      if (email) {
+        const el = document.getElementById('thanks-email');
+        el.hidden = false;
+        el.textContent = email;
+      }
+    </script>
+  </body>
+</html>

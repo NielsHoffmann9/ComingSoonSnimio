@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snimio — Binnenkort | Supersnelle mail voor Outlook &amp; Gmail</title>
+    <meta
+      name="description"
+      content="Snimio geeft je inbox terug. AI sorteert en prioriteert; jij handelt af met je toetsenbord. Schrijf je in voor early access — launch 29 mei 2026."
+    />
+    <meta property="og:title" content="Snimio — Mail die je vooruit helpt" />
+    <meta
+      property="og:description"
+      content="Supersnelle mail voor Outlook & Gmail. Early access — launch 29 mei 2026."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.snim.io/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <div class="nav__inner">
+        <a class="nav__logo" href="#">Snim<span>io</span></a>
+        <div class="nav__links">
+          <a href="#features" data-i18n-nl>Features</a>
+          <a href="#features" data-i18n-en>Features</a>
+          <a href="#how" data-i18n-nl>Hoe het werkt</a>
+          <a href="#how" data-i18n-en>How it works</a>
+          <a href="#faq" data-i18n-nl>FAQ</a>
+          <a href="#faq" data-i18n-en>FAQ</a>
+        </div>
+        <div class="nav__actions">
+          <div class="lang-toggle" role="group" aria-label="Taal">
+            <button type="button" data-lang="nl" class="is-active">NL</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+          <a href="#waitlist" class="btn btn--primary nav__cta"
+            ><span data-i18n-nl>Inschrijven</span><span data-i18n-en>Sign up</span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero__inner">
+        <p class="eyebrow" data-i18n-nl>Binnenkort beschikbaar</p>
+        <p class="eyebrow" data-i18n-en>Coming soon</p>
+
+        <div class="hero__display" aria-hidden="true">
+          <span class="hero__coming">COMING</span>
+          <span class="hero__soon">Soon</span>
+        </div>
+
+        <h1 class="hero__title" data-i18n-nl>Mail die je vooruit helpt</h1>
+        <h1 class="hero__title" data-i18n-en>Email that moves you forward</h1>
+
+        <div class="countdown" aria-live="polite">
+          <div class="countdown__unit">
+            <span class="countdown__value" id="cd-days">00</span>
+            <span class="countdown__label" data-i18n-nl>Dagen</span>
+            <span class="countdown__label" data-i18n-en>Days</span>
+          </div>
+          <span class="countdown__sep" aria-hidden="true">:</span>
+          <div class="countdown__unit">
+            <span class="countdown__value" id="cd-hours">00</span>
+            <span class="countdown__label" data-i18n-nl>Uren</span>
+            <span class="countdown__label" data-i18n-en>Hours</span>
+          </div>
+          <span class="countdown__sep" aria-hidden="true">:</span>
+          <div class="countdown__unit">
+            <span class="countdown__value" id="cd-mins">00</span>
+            <span class="countdown__label" data-i18n-nl>Min</span>
+            <span class="countdown__label" data-i18n-en>Min</span>
+          </div>
+          <span class="countdown__sep" aria-hidden="true">:</span>
+          <div class="countdown__unit">
+            <span class="countdown__value" id="cd-secs">00</span>
+            <span class="countdown__label" data-i18n-nl>Sec</span>
+            <span class="countdown__label" data-i18n-en>Sec</span>
+          </div>
+        </div>
+
+        <p class="hero__lead" data-i18n-nl>
+          De e-mailclient die je inbox teruggeeft. AI sorteert, labelt en prioriteert. Jij handelt af met je
+          toetsenbord. Inbox zero in minuten — voor Outlook én Gmail.
+        </p>
+        <p class="hero__lead" data-i18n-en>
+          The email client that gives your inbox back. AI sorts, labels, and prioritizes. You act with your
+          keyboard. Inbox zero in minutes — for Outlook and Gmail.
+        </p>
+
+        <div class="hero-cards">
+          <article class="hero-card">
+            <svg class="hero-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            <h3 data-i18n-nl>2–3× sneller</h3>
+            <h3 data-i18n-en>2–3× faster</h3>
+            <p data-i18n-nl>Native performance, geen Electron</p>
+            <p data-i18n-en>Native performance, not Electron</p>
+          </article>
+          <article class="hero-card">
+            <svg class="hero-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6-3 6 3v6l-6 3-6-3V9z" />
+              <path d="M12 12v9" />
+            </svg>
+            <h3>Keyboard-first</h3>
+            <p data-i18n-nl>50+ shortcuts en command palette</p>
+            <p data-i18n-en>50+ shortcuts and command palette</p>
+          </article>
+          <article class="hero-card">
+            <svg class="hero-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+              <path d="M5 19l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" />
+            </svg>
+            <h3 data-i18n-nl>AI-gestuurd</h3>
+            <h3 data-i18n-en>AI-powered</h3>
+            <p data-i18n-nl>Smart triage, auto-labels, suggested replies</p>
+            <p data-i18n-en>Smart triage, auto-labels, suggested replies</p>
+          </article>
+        </div>
+
+        <form class="waitlist" id="waitlist-form" action="bedankt.html" method="get" novalidate>
+          <div class="waitlist__row" id="waitlist">
+            <label class="sr-only" for="email" data-i18n-nl>E-mailadres</label>
+            <label class="sr-only" for="email" data-i18n-en>Email address</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="je@email.com"
+              data-i18n-placeholder-nl="je@email.com"
+              data-i18n-placeholder-en="you@email.com"
+              required
+            />
+            <button type="submit" class="btn btn--primary">
+              <span data-i18n-nl>Houd me op de hoogte</span>
+              <span data-i18n-en>Notify me at launch</span>
+            </button>
+          </div>
+          <label class="waitlist__gdpr">
+            <input type="checkbox" name="consent" required />
+            <span data-i18n-nl>Ik ga akkoord met updates over Snimio (launch &amp; early access).</span>
+            <span data-i18n-en>I agree to receive Snimio launch and early-access updates.</span>
+          </label>
+          <p id="form-error" class="form-error" role="alert"></p>
+          <p class="form-hint" data-i18n-nl>Geen spam. Alleen een seintje bij launch.</p>
+          <p class="form-hint" data-i18n-en>No spam. One ping when we launch.</p>
+        </form>
+
+        <p style="margin-top: 20px">
+          <a href="mailto:hello@snimio.nl?subject=Early%20access%20Snimio" class="btn btn--ghost" data-i18n-nl
+            >Vraag early access</a
+          >
+          <a href="mailto:hello@snimio.nl?subject=Early%20access%20Snimio" class="btn btn--ghost" data-i18n-en
+            >Request early access</a
+          >
+        </p>
+
+        <div class="scroll-hint">
+          <span data-i18n-nl>Scroll</span>
+          <span data-i18n-en>Scroll</span>
+          <span class="scroll-hint__arrow" aria-hidden="true">↓</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section proof reveal" id="proof">
+      <div class="section__inner">
+        <p class="proof__badge" data-i18n-nl>
+          Nog <strong>100</strong> plekken voor founding early access
+        </p>
+        <p class="proof__badge" data-i18n-en>
+          Only <strong>100</strong> founding early-access spots left
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="problem">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Het probleem</p>
+        <p class="section__eyebrow" data-i18n-en>The problem</p>
+        <h2 class="section__title" data-i18n-nl>Te veel mail. Te weinig structuur.</h2>
+        <h2 class="section__title" data-i18n-en>Too much mail. Too little structure.</h2>
+        <p class="section__lead" data-i18n-nl>
+          Je inbox groeit sneller dan je kunt opvolgen. Belangrijke antwoorden verdwijnen tussen nieuwsbrieven.
+          Snimio brengt snelheid, overzicht en opvolging samen — zonder van provider te wisselen.
+        </p>
+        <p class="section__lead" data-i18n-en>
+          Your inbox grows faster than you can follow up. Important replies get lost between newsletters. Snimio
+          combines speed, clarity, and follow-up — without switching providers.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="features">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Features</p>
+        <p class="section__eyebrow" data-i18n-en>Features</p>
+        <h2 class="section__title" data-i18n-nl>Alles wat je nodig hebt in één flow</h2>
+        <h2 class="section__title" data-i18n-en>Everything you need in one flow</h2>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            <h3 data-i18n-nl>Supersnelle inbox</h3>
+            <h3 data-i18n-en>Blazing inbox</h3>
+            <p data-i18n-nl>J/K door je mail, Done met E — voor Outlook én Gmail.</p>
+            <p data-i18n-en>J/K through mail, Done with E — Outlook &amp; Gmail.</p>
+          </article>
+          <article class="feature-card">
+            <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <h3 data-i18n-nl>Wacht op reactie</h3>
+            <h3 data-i18n-en>Awaiting reply</h3>
+            <p data-i18n-nl>Verzonden mails waar je nog antwoord op verwacht; AI leert mee.</p>
+            <p data-i18n-en>Sent mail you still expect a reply on; AI learns with you.</p>
+          </article>
+          <article class="feature-card">
+            <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <h3>Day Brief</h3>
+            <p data-i18n-nl>Ochtendoverzicht: urgentie, agenda en de mails die ertoe doen.</p>
+            <p data-i18n-en>Morning view: urgency, calendar, and mail that matters.</p>
+          </article>
+          <article class="feature-card">
+            <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+            </svg>
+            <h3>Ask AI</h3>
+            <p data-i18n-nl>Eén zoekactie over inbox, agenda, reminders en VIP-contacten.</p>
+            <p data-i18n-en>One search across inbox, calendar, reminders, and VIPs.</p>
+          </article>
+          <article class="feature-card">
+            <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            <h3 data-i18n-nl>Agenda in Snimio</h3>
+            <h3 data-i18n-en>Calendar built in</h3>
+            <p data-i18n-nl>Plan vanuit mail, stuur uitnodigingen, week naast je inbox.</p>
+            <p data-i18n-en>Schedule from mail, send invites, week beside inbox.</p>
+          </article>
+          <article class="feature-card">
+            <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
+            <h3 data-i18n-nl>Privacy onder regie</h3>
+            <h3 data-i18n-en>Privacy you control</h3>
+            <p data-i18n-nl>Tracking uit, externe AI optioneel, blur op bijlagen.</p>
+            <p data-i18n-en>Block tracking, optional external AI, blurred attachments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="orbit-section reveal" id="orbit">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Rondom Snimio</p>
+        <p class="section__eyebrow" data-i18n-en>Around Snimio</p>
+        <h2 class="section__title" data-i18n-nl>Jouw USPs in beweging</h2>
+        <h2 class="section__title" data-i18n-en>Your USPs in motion</h2>
+      </div>
+      <div class="orbit-wrap" aria-hidden="true">
+        <div class="orbit-ring"></div>
+        <div class="orbit-center">Snimio</div>
+        <div class="orbit-track">
+          <span class="orbit-item" style="--angle: 0deg"
+            ><span data-i18n-nl>Wacht op reactie</span><span data-i18n-en>Awaiting reply</span></span
+          >
+          <span class="orbit-item" style="--angle: 60deg">Day Brief</span>
+          <span class="orbit-item" style="--angle: 120deg">Keyboard-first</span>
+          <span class="orbit-item" style="--angle: 180deg">Ask AI</span>
+          <span class="orbit-item" style="--angle: 240deg"
+            ><span data-i18n-nl>Outlook + Gmail</span><span data-i18n-en>Outlook + Gmail</span></span
+          >
+          <span class="orbit-item" style="--angle: 300deg"
+            ><span data-i18n-nl>Privacy</span><span data-i18n-en>Privacy</span></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="screenshots">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Product</p>
+        <p class="section__eyebrow" data-i18n-en>Product</p>
+        <h2 class="section__title" data-i18n-nl>Zo ziet Snimio eruit</h2>
+        <h2 class="section__title" data-i18n-en>What Snimio looks like</h2>
+        <div class="screenshot-grid">
+          <figure class="screenshot-frame" data-parallax>
+            <div class="screenshot-frame__placeholder">
+              <span data-i18n-nl>Inbox — screenshot volgt</span>
+              <span data-i18n-en>Inbox — screenshot coming</span>
+            </div>
+            <figcaption>Inbox</figcaption>
+          </figure>
+          <figure class="screenshot-frame" data-parallax>
+            <div class="screenshot-frame__placeholder">
+              <span data-i18n-nl>Day Brief — screenshot volgt</span>
+              <span data-i18n-en>Day Brief — screenshot coming</span>
+            </div>
+            <figcaption>Day Brief</figcaption>
+          </figure>
+          <figure class="screenshot-frame" data-parallax>
+            <div class="screenshot-frame__placeholder">
+              <span data-i18n-nl>Wacht op reactie</span>
+              <span data-i18n-en>Awaiting reply</span>
+            </div>
+            <figcaption>
+              <span data-i18n-nl>Wacht op reactie</span>
+              <span data-i18n-en>Awaiting reply</span>
+            </figcaption>
+          </figure>
+          <figure class="screenshot-frame" data-parallax>
+            <div class="screenshot-frame__placeholder">
+              <span data-i18n-nl>Agenda — screenshot volgt</span>
+              <span data-i18n-en>Calendar — screenshot coming</span>
+            </div>
+            <figcaption>
+              <span data-i18n-nl>Agenda</span>
+              <span data-i18n-en>Calendar</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="how">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Hoe het werkt</p>
+        <p class="section__eyebrow" data-i18n-en>How it works</p>
+        <h2 class="section__title" data-i18n-nl>Drie stappen naar inbox zero</h2>
+        <h2 class="section__title" data-i18n-en>Three steps to inbox zero</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step__num">1</span>
+            <h3 data-i18n-nl>Koppel Outlook of Gmail</h3>
+            <h3 data-i18n-en>Connect Outlook or Gmail</h3>
+            <p data-i18n-nl>Veilige OAuth — je mail blijft bij Microsoft of Google.</p>
+            <p data-i18n-en>Secure OAuth — your mail stays with Microsoft or Google.</p>
+          </article>
+          <article class="step">
+            <span class="step__num">2</span>
+            <h3 data-i18n-nl>Werk met je toetsenbord</h3>
+            <h3 data-i18n-en>Work with your keyboard</h3>
+            <p data-i18n-nl>J/K, Done, Reply, reminders — alles zonder muisklikken.</p>
+            <p data-i18n-en>J/K, Done, Reply, reminders — without mouse clicks.</p>
+          </article>
+          <article class="step">
+            <span class="step__num">3</span>
+            <h3 data-i18n-nl>Laat opvolging aan Snimio</h3>
+            <h3 data-i18n-en>Let Snimio handle follow-up</h3>
+            <p data-i18n-nl>Wacht op reactie, Day Brief en AI houden je op schema.</p>
+            <p data-i18n-en>Awaiting reply, Day Brief, and AI keep you on track.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="video">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Video</p>
+        <p class="section__eyebrow" data-i18n-en>Video</p>
+        <h2 class="section__title" data-i18n-nl>Snimio in actie</h2>
+        <h2 class="section__title" data-i18n-en>Snimio in action</h2>
+        <div class="video-block">
+          <div class="video-placeholder">
+            <span aria-hidden="true">▶</span>
+            <span data-i18n-nl>Productvideo volgt — plaats MP4 in assets/hero.mp4</span>
+            <span data-i18n-en>Product video coming — add MP4 to assets/hero.mp4</span>
+          </div>
+          <!-- Uncomment when video is ready:
+          <video muted loop playsinline poster="assets/video-poster.jpg">
+            <source src="assets/hero.mp4" type="video/mp4" />
+          </video>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="privacy">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Privacy</p>
+        <p class="section__eyebrow" data-i18n-en>Privacy</p>
+        <h2 class="section__title" data-i18n-nl>Jij bepaalt wat AI ziet</h2>
+        <h2 class="section__title" data-i18n-en>You decide what AI sees</h2>
+        <p class="section__lead" data-i18n-nl>
+          Blokkeer tracking-pixels in mail. Zet externe AI uit als je dat wilt. Bijlagen op kaartjes kun je
+          tonen, verbergen of blurren — jij kiest.
+        </p>
+        <p class="section__lead" data-i18n-en>
+          Block tracking pixels in email. Turn off external AI if you want. Show, hide, or blur attachments on
+          cards — your choice.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="pricing">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>Early access</p>
+        <p class="section__eyebrow" data-i18n-en>Early access</p>
+        <div class="pricing-card">
+          <h2 class="section__title" style="margin-bottom: 8px" data-i18n-nl>Founding Pro</h2>
+          <h2 class="section__title" style="margin-bottom: 8px" data-i18n-en>Founding Pro</h2>
+          <p class="pricing-card__price" data-i18n-nl>vanaf €14 / maand</p>
+          <p class="pricing-card__price" data-i18n-en>from €14 / month</p>
+          <p data-i18n-nl style="color: var(--muted); margin: 0">
+            2 mailboxen · 12 maanden prijs vast · max. 300 founding-plekken. Definitieve prijzen bij launch.
+          </p>
+          <p data-i18n-en style="color: var(--muted); margin: 0">
+            2 mailboxes · 12 months locked price · max. 300 founding spots. Final pricing at launch.
+          </p>
+          <p style="margin-top: 24px">
+            <a href="#waitlist" class="btn btn--primary" data-scroll-cta
+              ><span data-i18n-nl>Inschrijven</span><span data-i18n-en>Sign up</span></a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="faq">
+      <div class="section__inner">
+        <p class="section__eyebrow" data-i18n-nl>FAQ</p>
+        <p class="section__eyebrow" data-i18n-en>FAQ</p>
+        <h2 class="section__title" data-i18n-nl>Veelgestelde vragen</h2>
+        <h2 class="section__title" data-i18n-en>Frequently asked</h2>
+        <div class="faq">
+          <details>
+            <summary
+              ><span data-i18n-nl>Wanneer kan ik Snimio gebruiken?</span
+              ><span data-i18n-en>When can I use Snimio?</span></summary
+            >
+            <p data-i18n-nl>
+              Launch is gepland op 29 mei 2026. Early-access-leden krijgen voorrang — schrijf je in op de
+              wachtlijst.
+            </p>
+            <p data-i18n-en>
+              Launch is planned for 29 May 2026. Early-access members get priority — join the waitlist.
+            </p>
+          </details>
+          <details>
+            <summary
+              ><span data-i18n-nl>Werkt Snimio met Outlook en Gmail?</span
+              ><span data-i18n-en>Does Snimio work with Outlook and Gmail?</span></summary
+            >
+            <p data-i18n-nl>Ja. Je koppelt je bestaande mailbox via een veilige OAuth-koppeling.</p>
+            <p data-i18n-en>Yes. Connect your existing mailbox via secure OAuth.</p>
+          </details>
+          <details>
+            <summary
+              ><span data-i18n-nl>Vervangt Snimio Outlook of Gmail?</span
+              ><span data-i18n-en>Does Snimio replace Outlook or Gmail?</span></summary
+            >
+            <p data-i18n-nl>
+              Nee. Je mail blijft bij Microsoft of Google; Snimio is je snelle werkplek erbovenop.
+            </p>
+            <p data-i18n-en>
+              No. Your mail stays with Microsoft or Google; Snimio is your fast workspace on top.
+            </p>
+          </details>
+          <details>
+            <summary
+              ><span data-i18n-nl>Wat is “Wacht op reactie”?</span
+              ><span data-i18n-en>What is “Awaiting reply”?</span></summary
+            >
+            <p data-i18n-nl>
+              Een lijst van mails die jij hebt verstuurd en waar je nog inhoudelijk antwoord op verwacht —
+              slimmer dan alleen snooze.
+            </p>
+            <p data-i18n-en>
+              A list of mail you sent where you still expect a substantive reply — smarter than snooze alone.
+            </p>
+          </details>
+          <details>
+            <summary data-i18n-nl>Is mijn mail veilig?</summary>
+            <summary data-i18n-en>Is my mail safe?</summary>
+            <p data-i18n-nl>
+              We gebruiken officiële API’s. Je kunt externe AI uitzetten en tracking in mails blokkeren.
+            </p>
+            <p data-i18n-en>
+              We use official APIs. You can disable external AI and block tracking in email.
+            </p>
+          </details>
+          <details>
+            <summary
+              ><span data-i18n-nl>Wat kost Snimio?</span><span data-i18n-en>What does Snimio cost?</span></summary
+            >
+            <p data-i18n-nl>
+              Founding Pro vanaf ca. €14/maand (2 mailboxen, 12 maanden prijs vast). Definitieve prijzen op de
+              launch-pagina.
+            </p>
+            <p data-i18n-en>
+              Founding Pro from about €14/month (2 mailboxes, 12 months locked). Final pricing at launch.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">Snimio</div>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#" data-i18n-nl>Privacy</a>
+          <a href="#" data-i18n-en>Privacy</a>
+          <a href="#" data-i18n-nl>Voorwaarden</a>
+          <a href="#" data-i18n-en>Terms</a>
+          <a href="mailto:hello@snimio.nl" data-i18n-nl>Contact</a>
+          <a href="mailto:hello@snimio.nl" data-i18n-en>Contact</a>
+        </nav>
+        <p class="footer__copy">© <span id="year"></span> Snimio · www.snim.io</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+      /* Placeholder swap on lang change */
+      (function () {
+        const input = document.getElementById('email');
+        if (!input) return;
+        const obs = new MutationObserver(() => {
+          const en = document.body.classList.contains('lang-en');
+          input.placeholder = en ? 'you@email.com' : 'je@email.com';
+        });
+        obs.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      })();
+    </script>
+  </body>
+</html>

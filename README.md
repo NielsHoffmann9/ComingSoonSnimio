@@ -1,39 +1,41 @@
-# Coming Soon — Snimio
+# Snimio Coming Soon
 
-Landingspagina voor Snimio (wachtlijst / “binnenkort beschikbaar”). Zelfde stack-basis als het hoofdproject: **Vite + React 18 + TypeScript**, lokaal bouwen, deploy via GitHub (`flowixagents`).
+Landingspagina (wachtlijst + productuitleg) voor **Snimio** — launch **29 mei 2026**.
 
-## Vereisten
+| | |
+|--|--|
+| **GitHub** | https://github.com/flowixagents/ComingSoonSnimio |
+| **Live (Pages)** | https://flowixagents.github.io/ComingSoonSnimio/ *(na Pages aan)* |
+| **Productiedomein** | www.snim.io *(DNS apart instellen)* |
 
-- Node 18+
-- npm
+## Wat staat waar?
 
-## Lokaal starten
+| Map | Inhoud |
+|-----|--------|
+| **`site/`** | **Productie** — statische HTML (`index.html`, `bedankt.html`, css, js) |
+| `docs/` | Brief, vragenlijst, AI copy-paste prompt |
+| `src/` | Oude Vite/React prototype (niet productie) |
 
-```bash
-cd ComingSoonSnimio
-npm install
-npm run dev
+## Lokaal bekijken
+
+```powershell
+cd site
+npx serve . -l 5176
 ```
 
-Open http://localhost:5176
+Of vanuit root: `npm run preview:site` → http://localhost:5176
 
-## Build
+## Deploy
 
-```bash
-npm run build
-npm run preview
-```
+1. **GitHub Pages** — push naar `main`; workflow publiceert map `site/`.
+2. In repo: **Settings → Pages → Source: GitHub Actions**.
+3. Optioneel custom domain: `www.snim.io` + CNAME in `site/`.
 
-## GitHub
+## Wachtlijst API
 
-Remote: `https://github.com/flowixagents/ComingSoonSnimio.git` (na `git push -u origin main`).
+In `site/js/main.js`: zet `CONFIG.waitlistApi` op het Snimio-endpoint.
 
-## Structuur
+## Documentatie
 
-```
-ComingSoonSnimio/
-  src/          # React-pagina
-  public/       # favicon, statische assets
-  index.html
-  vite.config.ts
-```
+- `docs/AI-BUILD-PROMPT.md` — volledige opdracht voor AI (knippen/plakken)
+- `docs/COMING-SOON-BRIEF.md` — product- en designbrief
