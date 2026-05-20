@@ -22,19 +22,24 @@ $body = @{
   has_issues  = $true
 } | ConvertTo-Json
 
+$fullName = "$org/$repoName"
 try {
-  Invoke-RestMethod -Uri "https://api.github.com/repos/$org/$repoName" -Headers $headers -Method Get | Out-Null
-  Write-Host "Repo $org/$repoName bestaat al."
+  $existing = Invoke-RestMethod -Uri "https://api.github.com/repos/$fullName" -Headers $headers -Method Get
+  Write-Host "Repo $fullName bestaat al."
 } catch {
   Write-Host "Repo aanmaken: $org/$repoName ..."
   try {
-    Invoke-RestMethod -Uri "https://api.github.com/orgs/$org/repos" -Headers $headers -Method Post -Body $body -ContentType "application/json"
+    $created = Invoke-RestMethod -Uri "https://api.github.com/orgs/$org/repos" -Headers $headers -Method Post -Body $body -ContentType "application/json"
+    $fullName = $created.full_name
   } catch {
-    Write-Host "Org-repo mislukt, probeer onder user-account..."
-    Invoke-RestMethod -Uri "https://api.github.com/user/repos" -Headers $headers -Method Post -Body $body -ContentType "application/json"
+    Write-Host "Org-repo mislukt (geen rechten op flowixagents?) — onder jouw account:"
+    $created = Invoke-RestMethod -Uri "https://api.github.com/user/repos" -Headers $headers -Method Post -Body $body -ContentType "application/json"
+    $fullName = $created.full_name
   }
 }
 
-git remote set-url origin "https://github.com/$org/$repoName.git"
+$remoteUrl = "https://github.com/$fullName.git"
+git remote set-url origin $remoteUrl
 git push -u origin main
-Write-Host "Push klaar: https://github.com/$org/$repoName"
+Write-Host "Push klaar: https://github.com/$fullName"
+Write-Host "Pages: Settings -> Pages -> GitHub Actions (workflow deploy-pages.yml)"
