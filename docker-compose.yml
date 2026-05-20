@@ -1,0 +1,13 @@
+# Marketing site — snim.io (koppel aan extern netwerk snim_edge, zie README)
+services:
+  snimio-site:
+    build: .
+    image: snimio-coming-soon:latest
+    container_name: snimio-site
+    restart: unless-stopped
+    networks:
+      - snim_edge
+
+networks:
+  snim_edge:
+    external: true
