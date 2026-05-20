@@ -278,22 +278,62 @@
         <h2 class="section__title" data-i18n-nl>Jouw USPs in beweging</h2>
         <h2 class="section__title" data-i18n-en>Your USPs in motion</h2>
       </div>
-      <div class="orbit-wrap" aria-hidden="true">
-        <div class="orbit-ring"></div>
-        <div class="orbit-center">Snimio</div>
-        <div class="orbit-track">
-          <span class="orbit-item" style="--angle: 0deg"
-            ><span data-i18n-nl>Wacht op reactie</span><span data-i18n-en>Awaiting reply</span></span
-          >
-          <span class="orbit-item" style="--angle: 60deg">Day Brief</span>
-          <span class="orbit-item" style="--angle: 120deg">Keyboard-first</span>
-          <span class="orbit-item" style="--angle: 180deg">Ask AI</span>
-          <span class="orbit-item" style="--angle: 240deg"
-            ><span data-i18n-nl>Outlook + Gmail</span><span data-i18n-en>Outlook + Gmail</span></span
-          >
-          <span class="orbit-item" style="--angle: 300deg"
-            ><span data-i18n-nl>Privacy</span><span data-i18n-en>Privacy</span></span
-          >
+      <div class="orbit-scene" aria-label="Snimio USPs">
+        <div class="orbit-scene__glow" aria-hidden="true"></div>
+        <div class="orbit-wrap">
+          <div class="orbit-ring orbit-ring--outer" aria-hidden="true"></div>
+          <div class="orbit-ring orbit-ring--inner" aria-hidden="true"></div>
+          <div class="orbit-ring orbit-ring--dots" aria-hidden="true"></div>
+
+          <div class="orbit-center">
+            <span class="orbit-center__ring" aria-hidden="true"></span>
+            <span class="orbit-center__core">Snimio</span>
+          </div>
+
+          <div class="orbit-track" style="--orbit-duration: 44s">
+            <div class="orbit-node" style="--angle: -90deg; --hue: 270" data-usp="ask">
+              <span class="orbit-pill">
+                <span class="orbit-pill__dot" aria-hidden="true"></span>
+                <span class="orbit-pill__text">Ask AI</span>
+              </span>
+            </div>
+            <div class="orbit-node" style="--angle: -30deg; --hue: 210" data-usp="mail">
+              <span class="orbit-pill">
+                <span class="orbit-pill__dot" aria-hidden="true"></span>
+                <span class="orbit-pill__text"
+                  ><span data-i18n-nl>Outlook + Gmail</span><span data-i18n-en>Outlook + Gmail</span></span
+                >
+              </span>
+            </div>
+            <div class="orbit-node" style="--angle: 30deg; --hue: 155" data-usp="privacy">
+              <span class="orbit-pill">
+                <span class="orbit-pill__dot" aria-hidden="true"></span>
+                <span class="orbit-pill__text"
+                  ><span data-i18n-nl>Privacy</span><span data-i18n-en>Privacy</span></span
+                >
+              </span>
+            </div>
+            <div class="orbit-node" style="--angle: 90deg; --hue: 15" data-usp="reply">
+              <span class="orbit-pill">
+                <span class="orbit-pill__dot" aria-hidden="true"></span>
+                <span class="orbit-pill__text"
+                  ><span data-i18n-nl>Wacht op reactie</span><span data-i18n-en>Awaiting reply</span></span
+                >
+              </span>
+            </div>
+            <div class="orbit-node" style="--angle: 150deg; --hue: 45" data-usp="brief">
+              <span class="orbit-pill">
+                <span class="orbit-pill__dot" aria-hidden="true"></span>
+                <span class="orbit-pill__text">Day Brief</span>
+              </span>
+            </div>
+            <div class="orbit-node" style="--angle: -150deg; --hue: 185" data-usp="keyboard">
+              <span class="orbit-pill">
+                <span class="orbit-pill__dot" aria-hidden="true"></span>
+                <span class="orbit-pill__text">Keyboard-first</span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

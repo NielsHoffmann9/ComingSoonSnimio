@@ -209,6 +209,32 @@ function initForm() {
   });
 }
 
+function initOrbitSpotlight() {
+  const pills = document.querySelectorAll('.orbit-pill');
+  if (!pills.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let index = 0;
+  const activate = () => {
+    pills.forEach((p) => p.classList.remove('is-active'));
+    pills[index]?.classList.add('is-active');
+    index = (index + 1) % pills.length;
+  };
+
+  activate();
+  const interval = setInterval(activate, 2800);
+  pills.forEach((pill, i) => {
+    pill.addEventListener('mouseenter', () => {
+      pills.forEach((p) => p.classList.remove('is-active'));
+      pill.classList.add('is-active');
+      index = (i + 1) % pills.length;
+    });
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) clearInterval(interval);
+  });
+}
+
 function init() {
   initLang();
   initNav();
@@ -216,6 +242,7 @@ function init() {
   initReveal();
   initParallax();
   initForm();
+  initOrbitSpotlight();
 }
 
 if (document.readyState === 'loading') {
